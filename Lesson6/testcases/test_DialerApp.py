@@ -8,8 +8,7 @@ desired_caps = dict(
 
     deviceName='Android',
     platformName='Android',
-    # appPackage='com.android.dialer',
-    appPackage='com.samsung.android.dialer',
+    appPackage='com.android.dialer',
     appActivity='.BBKTwelveKeyDialer'
 
 )
@@ -17,21 +16,12 @@ desired_caps = dict(
 
 driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub',desired_caps)
 
-#driver.find_element(By.ID,'com.android.dialer:id/one').click()
-#driver.find_element(By.ID,'com.android.dialer:id/two').click()
-#driver.find_element(By.ID,'com.android.dialer:id/three').click()
-#driver.find_element(By.ID,'com.android.dialer:id/five').click()
-
-#driver.find_element(By.ID,'com.android.dialer:id/dialButtonSim1').click()
-
-
-driver.find_element(By.ID,'com.samsung.android.dialer:id/one').click()
-driver.find_element(By.ID,'com.samsung.android.dialer:id/two').click()
-driver.find_element(By.ID,'com.samsung.android.dialer:id/three').click()
-driver.find_element(By.ID,'com.samsung.android.dialer:id/five').click()
+driver.find_element(By.ID,'com.android.dialer:id/one').click()
+driver.find_element(By.ID,'com.android.dialer:id/two').click()
+driver.find_element(By.ID,'com.android.dialer:id/three').click()
+driver.find_element(By.ID,'com.android.dialer:id/five').click()
 
 driver.find_element(By.ID,'com.android.dialer:id/dialButtonSim1').click()
-
 
 time.sleep(2)
 driver.quit()
